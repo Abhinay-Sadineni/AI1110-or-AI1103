@@ -8,11 +8,11 @@ B=np.array([2,3])
 C=np.array([1,1])
 D=np.array([2,0])
 
-#reflexive matrix----------------------
+#reflective matrix used to get reflected points wrt to y-axis----------------------
 REF_Y_AXIS = np.array([[-1, 0], [0, 1]])
-B_ref=B@REF_Y_AXIS
-C_ref=C@REF_Y_AXIS
-D_ref = D@REF_Y_AXIS
+B_ref= B@REF_Y_AXIS
+C_ref= C@REF_Y_AXIS
+D_ref= D@REF_Y_AXIS
 
 #plotting points and line segments---------------------------
 plt.grid()
