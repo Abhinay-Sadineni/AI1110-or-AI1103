@@ -24,6 +24,7 @@ C=np.array([1,1])
 D=np.array([2,0])
 
 # here Mr is used in place of M'
+#M = np.array([[B[0],C[0],D[0]],[B[1],C[1],D[1]]])---This is optional method to get stacked matrix from B,C,D
 #reflection vector and stacked matrix of B,C,D ----------------------
 R = np.array([[-1,0], [0, 1]])
 M = np.array([[2,1,2],[3,1,0]])
