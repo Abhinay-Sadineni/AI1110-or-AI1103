@@ -33,7 +33,7 @@ Mr=R@M
 #Cr in place of C'
 #Dr in place of D'
 # Mr.T gives transpose of matrix
-#which makes each to get the columns of matrix
+#which makes easy to get the columns of matrix
 #gettting column vectors from the matrix  to get reflected points--------------------
 Br=Mr.T[0]
 Cr=Mr.T[1]
