@@ -1,10 +1,8 @@
-#import------------------------
 import matplotlib.pyplot as plt
 import numpy as np
 from numpy import linalg as LA
 
-
-#for creating lines---------------
+#for creating lines-------------------------------
 def line_gen(A,B):
   len =10
   dim = A.shape[0]
@@ -16,29 +14,29 @@ def line_gen(A,B):
   return x_AB
 
 
-#this code excatly follows the theory------------------------------
-#points vectors---------------------------
+#General formula for Reflection of point wrt a given line ----------------------------
+def reflect(n,c,P):
+
+  D = P+2*(c-n@P)/(LA.norm(n)**2)*n
+  return D
+
+
+#point vectors-------------------------
 A=np.array([0,4])
 B=np.array([2,3])
 C=np.array([1,1])
 D=np.array([2,0])
 
-# here Mr is used in place of M'
-#M = np.array([[B[0],C[0],D[0]],[B[1],C[1],D[1]]])---This is optional method to get stacked matrix from B,C,D
-#reflection vector and stacked matrix of B,C,D ----------------------
-R = np.array([[-1,0], [0, 1]])
-M = np.array([[2,1,2],[3,1,0]])
-Mr=R@M
 
-#Br in place of B'
-#Cr in place of C'
-#Dr in place of D'
-# Mr.T gives transpose of matrix
-#which makes easy to get the columns of matrix
-#gettting column vectors from the matrix  to get reflected points--------------------
-Br=Mr.T[0]
-Cr=Mr.T[1]
-Dr=Mr.T[2]
+#normal vector of line ,and parameter c of y-axis---------------
+w=np.array([1,0])
+k=0
+
+
+#getting reflected point vectors wrt y axis--------------
+Br=reflect(w,k,B)
+Cr=reflect(w,k,C)
+Dr=reflect(w,k,D)
 
 #lines vector----------------------------------
 x_AB = line_gen(A,B)
@@ -77,5 +75,4 @@ ax.set_ylim([-2, 5])
 plt.xlabel('$x$')
 plt.ylabel('$y$')
 plt.legend(loc='best')
-plt.savefig("../Figs/Figure_1.png")
 plt.show()
