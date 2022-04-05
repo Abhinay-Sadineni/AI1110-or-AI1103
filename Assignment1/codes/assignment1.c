@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+/*This code excatly follows the theory */
 /*function to write data of point in the dat file*/
 void put_data(float P[],int k,FILE*fp ){
     for(int i=0;i<k;i++){
