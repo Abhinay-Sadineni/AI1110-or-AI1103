@@ -19,7 +19,7 @@ float dot(float a[],float b[],int k){
               return pro;
 }
 
-/*Normal function for norm of a vector*/
+/*Normal function for square of norm of a vector*/
 float sqnorm(float n[],int k){
     float w=0;
     for(int i=0;i<k;i++){
