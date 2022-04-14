@@ -1,6 +1,7 @@
 #include <stdio.h>
 
 /*this function gives equation of line of regression */
+/*this is also vector approch but this makes easier */
 void equation(float X[],float Y[],int n,FILE *fp){
     float Sx=0,Sy=0;
     float Sx2=0,Sxy=0;
