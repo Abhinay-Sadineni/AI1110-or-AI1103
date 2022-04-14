@@ -2,6 +2,7 @@
 
 /*this function gives equation of line of regression */
 /*this is also vector approch but this makes easier */
+/*this code is to verify the coefficents obtained in the pdf*/
 void equation(float X[],float Y[],int n,FILE *fp){
     float Sx=0,Sy=0;
     float Sx2=0,Sxy=0;
