@@ -1,0 +1,75 @@
+\documentclass[journal,12pt,twocolumn]{IEEEtran}
+
+\usepackage{enumitem}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{gensymb}
+\usepackage{graphicx}
+
+\def\inputGnumericTable{}
+
+\usepackage[latin1]{inputenc}                                 
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                        
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}
+\usepackage{minibox}
+\usepackage{caption} 
+\usepackage{listings}
+\captionsetup[table]{skip=3pt}  
+\providecommand{\pr}[1]{\ensuremath{\Pr\left(#1\right)}}
+\renewcommand{\thefigure}{\arabic{table}}
+\renewcommand{\thetable}{\arabic{table}}
+\lstset{
+	%language=C,
+	frame=single, 
+	breaklines=true,
+	columns=fullflexible
+}                               
+
+
+\vspace{3cm}
+\title{
+	AI1110: Assignment 3
+}
+\author{ 
+	SADINENI ABHINAY - CS21BTECH11055
+}	
+\begin{document}
+	\maketitle
+	\begin{abstract}
+		This document contains the solution to Question of Chapter 15 (Probability) in the NCERT Class 9 Textbook.
+	\end{abstract}
+	
+	\textbf{Probability Excercise 15.1 Q1.}
+	
+	In a cricket match, a batswoman hits a boundary 6 times out of 30 balls she plays. Find the probability that she did not hit a boundary.
+	
+	\textbf{Solution.}
+	
+	Let $X \in \{0,1\} $is random variable that denote whether the batswomen hits a boundary or not.
+	
+	\begin{table}[ht!]
+		\centering
+		\input{tables/table1.tex}
+	\end{table}
+The probability that the batswomen hits a  boundary:
+\begin{align}
+	 &\pr{X=1}\\
+&=\frac{\text{The number of times when she hit boundary}}{\text{total number of balls played}}\\
+	&=\frac{6}{30}\\
+	&=0.2
+\end{align}
+The probability that the batswomen doesn't hit a boundary:
+We know that the event mention are mutual exclusive and exhaustive events 
+\begin{align}
+	\pr{X=0}&=1-\pr{X=1}\\
+	&=1-0.2\\
+	&=0.8
+\end{align}
+	$\therefore$ the probability that the batswomen does'nt hit
+	 a boundary is 0.8
+\end{document}
