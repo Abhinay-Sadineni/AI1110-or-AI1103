@@ -15,8 +15,9 @@ color = np.array(raw_data[0])
 pr_1 = color[0]/N
 
 print("Probability that the ball drawn is red ",pr_1)
-print("Probability that the ball drawn is red ",1-pr_1)
+print("Probability that the ball drawn is not red ",1-pr_1)
 
+#experinmental probability
 W=2
 
 x = RN.randint(0, 2, size=W)
