@@ -1,0 +1,81 @@
+\documentclass[journal,12pt,twocolumn]{IEEEtran}
+
+\usepackage{enumitem}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{gensymb}
+\usepackage{graphicx}
+
+\def\inputGnumericTable{}
+
+\usepackage[latin1]{inputenc}                                 
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                        
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}
+\usepackage{minibox}
+\usepackage{caption} 
+\usepackage{listings}
+\captionsetup[table]{skip=3pt}  
+\providecommand{\pr}[1]{\ensuremath{\Pr\left(#1\right)}}
+\renewcommand{\thefigure}{\arabic{table}}
+\renewcommand{\thetable}{\arabic{table}}
+\lstset{
+	%language=C,
+	frame=single, 
+	breaklines=true,
+	columns=fullflexible
+}                               
+
+
+\vspace{3cm}
+\title{
+	AI1110: Assignment 4
+}
+\author{ 
+	SADINENI ABHINAY - CS21BTECH11055
+}	
+\begin{document}
+	\maketitle
+	\begin{abstract}
+		This document contains the solution to Question of Chapter 15 (Probability) in the NCERT Class 10 Textbook.
+	\end{abstract}
+	
+	\textbf{Probability Excercise 15.1 Q8.}
+	A bag contains 3 red balls and 5 black balls. A ball is drawn at random from the bag. What is the probability that the ball drawn is 
+	\begin{enumerate}
+		\item red
+		\item not a red
+	\end{enumerate}
+	
+	\textbf{Solution.}
+	
+	Let $X \in \{0,1\} $is random variable that denote whether the ball is red or a black.
+	\begin{table}[ht!]
+	\centering
+	\input{tables/table1.tex}
+	\caption{Events}
+	\label{table:1}
+	\end{table}
+	\begin{enumerate}
+	\item The probability that the ball drawn is red 
+	   \begin{align}
+	   	\pr{X=0}&=\frac{\text{no of red colored balls}}{\text{Total no of balls}}\\
+	   	        &=\frac{3}{3+5}\\
+	   	        &=0.375
+	   \end{align}
+	\item The probability that the ball drawn is not a red is same as
+	the probability that ball drawn is black because there are only is
+	two type of colors and both events mentioned in the table are mutual exhaustive and exculsive events.
+	\begin{align}
+		\pr{X=1}&=1-\pr{X=0}\\
+		&=1-\frac{3}{8}\\
+		&=0.625
+	\end{align}
+\end{enumerate}
+$\therefore$ the probability that the ball drawn is red and is not red are 0.375 and 0.675 respectively.
+
+\end{document}
