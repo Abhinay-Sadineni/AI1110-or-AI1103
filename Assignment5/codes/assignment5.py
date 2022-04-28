@@ -32,21 +32,17 @@ print("P(C)={}".format(1-binom.cdf(k,n,p)))
 
 #Simulating the probability using  the binomial random variable
 data_binom = binom.rvs(n,p,size=simlen)
-#Simulating the event of jumping 10 hurdles
+#Simulating the event of tossing a coin three times
+#checking probability condition
 err_A = np.nonzero(data_binom==0)
 err_B = np.nonzero(data_binom==1)
 err_C = np.nonzero(2<=data_binom)
-#checking probability condition
+#computing the probability
 err_n = np.size(err_A)
 err_w = np.size(err_B)
 err_q = np.size(err_C)
-#computing the probability
 print("Experimental probability of the events:")
 print(err_n/simlen)
 print(err_w/simlen)
 print(err_q/simlen)
 print((err_n+err_w+err_q)/simlen)
-
-
-
-
