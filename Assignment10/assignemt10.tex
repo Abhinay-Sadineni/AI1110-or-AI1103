@@ -1,0 +1,114 @@
+\documentclass{beamer}
+\usetheme{CambridgeUS}
+\usepackage{listings}
+\usepackage{blkarray}
+\usepackage{listings}
+\usepackage{subcaption}
+\usepackage{url}
+\usepackage{tikz}
+\usepackage{tkz-euclide} % loads  TikZ and tkz-base
+%\usetkzobj{all}
+\usetikzlibrary{calc,math}
+\usepackage{float}
+\renewcommand{\vec}[1]{\mathbf{#1}}
+\usepackage[export]{adjustbox}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{tikz}
+\usepackage{hyperref}
+\usepackage{bm}
+\usetikzlibrary{automata, positioning}
+\providecommand{\pr}[1]{\ensuremath{\Pr\left(#1\right)}}
+\providecommand{\e}[1]{\ensuremath{E\left(#1\right)}}
+\providecommand{\mbf}{\mathbf}
+\let\vec\mathbf
+\providecommand{\dec}[2]{\ensuremath{\overset{#1}{\underset{#2}{\gtrless}}}}
+\newcommand{\myvec}[1]{\ensuremath{\begin{pmatrix}#1\end{pmatrix}}}
+\newcommand{\mydet}[1]{\ensuremath{\begin{vmatrix}#1\end{vmatrix}}}
+\providecommand{\qfunc}[1]{\ensuremath{Q\left(#1\right)}}
+\providecommand{\sbrak}[1]{\ensuremath{{}\left[#1\right]}}
+\providecommand{\lsbrak}[1]{\ensuremath{{}\left[#1\right.}}
+\providecommand{\rsbrak}[1]{\ensuremath{{}\left.#1\right]}}
+\providecommand{\brak}[1]{\ensuremath{\left(#1\right)}}
+\providecommand{\lbrak}[1]{\ensuremath{\left(#1\right.}}
+\providecommand{\rbrak}[1]{\ensuremath{\left.#1\right)}}
+\providecommand{\cbrak}[1]{\ensuremath{\left\{#1\right\}}}
+\providecommand{\lcbrak}[1]{\ensuremath{\left\{#1\right.}}
+\providecommand{\rcbrak}[1]{\ensuremath{\left.#1\right\}}}
+\providecommand{\abs}[1]{\vert#1\vert}
+\newcommand*{\permcomb}[4][0mu]{{{}^{#3}\mkern#1#2_{#4}}}
+\newcommand*{\perm}[1][-3mu]{\permcomb[#1]{P}}
+\newcommand*{\comb}[1][-1mu]{\permcomb[#1]{C}}
+\renewcommand{\thetable}{\arabic{table}} 
+\newcounter{saveenumi}
+\newcommand{\seti}{\setcounter{saveenumi}{\value{enumi}}}
+\newcommand{\conti}{\setcounter{enumi}{\value{saveenumi}}}
+\usepackage{amsmath}
+\setbeamertemplate{caption}[numbered]{}
+\DeclareUnicodeCharacter{2212}{\textendash}
+\title{AI1110 Assignment 10}
+\author{SADINENI ABHINAY-CS21BTECH11055 }
+\date{\today}
+\logo{\large \LaTeX{}}
+\begin{document}
+\newcommand{\BEQA}{\begin{eqnarray}}
+\newcommand{\EEQA}{\end{eqnarray}}
+\newcommand{\define}{\stackrel{\triangle}{=}}
+\newcommand*\circled[1]{\tikz[baseline=(char.base)]{
+    \node[shape=circle,draw,inner sep=2pt] (char) {#1};}}
+\bibliographystyle{IEEEtran}
+	\begin{frame}
+		\titlepage
+	\end{frame}
+\begin{frame}{Outline}
+\tableofcontents
+\end{frame}
+
+\section{Abstract}
+\begin{frame}{Abstract}
+This document contains problem of chapter 7 in papoullis textbook
+\end{frame}
+\section{Problem}
+\begin{frame}{Problem}
+\begin{block}{Chapter 7-7.9}
+Show that if 
+	\begin{align}
+		x_i \ge 0 , \e{x_i^2}=M \text{ and } s=\sum_{i=1}^{n} x_i
+	\end{align}
+	then,
+	\begin{align}
+		\e{s^2} \le M\e{n^2}
+	\end{align}
+\end{block}
+\end{frame}
+\section{Solution}
+\begin{frame}{Solution}
+	\begin{enumerate}
+	\item Simplfy $\e{s^2}$
+\begin{align}
+	\e{s^2|n=n}&=\e{\brak{\sum_{i=1}^{n} x_i^2}} \\
+	     &=\e{\sum_{j=1}^n\sum_{i=1}^n x_i x_j} \\
+	       \end{align}
+		\item Triangle Inequality 
+			\begin{align}
+				\e{x_i x_j}^2 &\le \e{x_i^2}\e{x_j^2}  \\
+				             &\le  M^2 
+					\end{align}
+					\seti
+	\end{enumerate}
+\end{frame}
+\section{Final Result}
+\begin{frame}{final Result}
+
+\begin{enumerate}
+\seti
+\item Let us Apply the Above inequlity in the question
+	\begin{align}
+\e{\sum_{j=1}^{n} \sum_{i=1}^{n} x_i x_j} &\le M^2 \times n^{2} \\
+					\e{s^2}&=\e{\e{s^2|n=n}}\\ &=\e{M^2\brak{n^2}} \\
+				       				       &=M^2\e{n^2}
+		\end{align}
+		\end{enumerate}
+\end{frame}
+\end{document}
